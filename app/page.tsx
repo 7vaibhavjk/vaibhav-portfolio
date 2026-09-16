@@ -4,6 +4,7 @@ import Reveal from "./components/Reveal";
 import ExperienceEducation from "./components/ExperienceEducation";
 import Navbar from "./components/Navbar";
 import PipelineInteractive from "./components/PipelineInteractive";
+import { Icon } from "@iconify/react";
 
 export default function Home() {
   const dataFlow = [
@@ -72,18 +73,6 @@ export default function Home() {
             {/* Hero copy */}
             <Reveal>
               <div>
-                <div className="flex items-center gap-4">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#637187]">
-                    00 / Introduction
-                  </span>
-
-                  <span className="h-px w-16 bg-[#202a3a]" />
-
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#637187]">
-                    Melbourne
-                  </span>
-                </div>
-
                 <div className="mt-8">
                   <h2 className="font-display text-5xl font-medium leading-none tracking-[-0.045em] text-[#e8edf5] sm:text-6xl">
                     Hello, I&apos;m
@@ -121,13 +110,45 @@ export default function Home() {
                     </span>
                   </a>
 
-                  <a
-                    href="#contact"
-                    className="rounded-full border border-[#354257] px-6 py-3 text-sm font-medium text-[#b9c5d6] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#708197] hover:bg-[#0d131f]"
-                  >
-                    Get in touch
-                  </a>
-                </div>
+                  <div className="flex items-center gap-2">
+                    <a
+                      href="mailto:7vaibhavjk@gmail.com"
+                      aria-label="Email Vaibhav"
+                      className="group flex h-12 w-12 items-center justify-center rounded-full border border-[#354257] bg-[#0d131f]/60 text-[#8d9aae] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#637187] hover:bg-[#111a28] hover:text-white"
+                    >
+                      <Icon
+                        icon="mdi:email-outline"
+                        className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </a>
+
+                    <a
+                      href="https://www.linkedin.com/in/vaibhav-kulkarni-5698ba1a7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Vaibhav on LinkedIn"
+                      className="group flex h-12 w-12 items-center justify-center rounded-full border border-[#354257] bg-[#0d131f]/60 text-[#8d9aae] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#637187] hover:bg-[#111a28] hover:text-white"
+                    >
+                      <Icon
+                        icon="simple-icons:linkedin"
+                        className="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </a>
+
+                    <a
+                      href="https://github.com/7vaibhavjk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Vaibhav on GitHub"
+                      className="group flex h-12 w-12 items-center justify-center rounded-full border border-[#354257] bg-[#0d131f]/60 text-[#8d9aae] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#637187] hover:bg-[#111a28] hover:text-white"
+                    >
+                      <Icon
+                        icon="simple-icons:github"
+                        className="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </a>
+                   </div>
+                  </div>
 
                 <div className="mt-7 flex items-center gap-3">
                   <span className="relative flex h-2 w-2">
@@ -163,32 +184,42 @@ export default function Home() {
             {/* Hero visual */}
             <Reveal delay={0.12}>
               <div className="relative">
-                <div className="system-panel rounded-3xl p-7 shadow-2xl shadow-black/30 md:p-8">
-                  <div className="relative z-10">
-                    <PipelineInteractive />
+                <div className="overflow-hidden rounded-3xl border border-[#202a3a] bg-[#0d131f] shadow-2xl shadow-black/30">
+                  <div className="relative aspect-[720/982] overflow-hidden">
+                    <img
+                      src="/images/graduation.jpeg"
+                      alt="Graduation day at Monash University"
+                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                    />
+                  </div>
 
-                    <div className="mt-8 grid grid-cols-2 gap-3 border-t border-[#202a3a] pt-6">
+                  <div className="border-t border-[#202a3a] px-6 py-5">
+                    <div className="flex items-center justify-between gap-4">
                       <div>
                         <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#536276]">
-                          Focus
+                          2025 · Monash University
                         </p>
 
-                        <p className="mt-2 text-sm text-[#aebbd0]">
-                          Data Engineering
+                        <p className="mt-2 font-display text-sm text-[#b7c3d3]">
+                          Master of Data Science
                         </p>
                       </div>
 
-                      <div>
-                        <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#536276]">
-                          Stack
-                        </p>
-
-                        <p className="mt-2 text-sm text-[#aebbd0]">
-                          Azure · Databricks
-                        </p>
-                      </div>
+                      <span className="rounded-full border border-[#354257] bg-[#101925] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.16em] text-[#637187]">
+                        Graduated
+                      </span>
                     </div>
                   </div>
+                </div>
+
+                <div className="mt-4 flex items-center justify-between border-t border-[#202a3a] pt-4">
+                  <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#536276]">
+                    Based in
+                  </span>
+
+                  <span className="text-sm text-[#8d9aae]">
+                    Melbourne, Australia
+                  </span>
                 </div>
               </div>
             </Reveal>
@@ -220,108 +251,110 @@ export default function Home() {
             <div className="grid gap-14 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
               {/* About copy */}
               <div>
-                <h2 className="font-display max-w-4xl text-3xl font-medium leading-[1.12] tracking-[-0.035em] text-[#e8edf5] md:text-5xl">
-                  I like figuring out what happens between “we have data” and
-                  “we can actually use it.”
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#637187]">
+                  ABOUT
+                </p>
+
+                <h2 className="mt-5 font-display max-w-4xl text-3xl font-medium leading-[1.12] tracking-[-0.035em] text-[#e8edf5] md:text-5xl">
+                  I like figuring out what happens between{" "}
+                  <span className="text-[#718096]">“we have data”</span> and{" "}
+                  <span className="text-[#718096]">“we can actually use it.”</span>
                 </h2>
 
-                <div className="mt-10 max-w-3xl space-y-6 text-base leading-8 text-[#8d9aae]">
-                  <p>That&apos;s where most of my work lives.</p>
-
+                <div className="mt-7 max-w-3xl space-y-4 text-base leading-7 text-[#8d9aae]">
                   <p>
-                    I started my career at TCS, working on software systems
-                    before gradually becoming more interested in the data
-                    behind those systems — how it moves, how it can be
-                    transformed, and how good engineering can turn messy
-                    information into something people can actually trust.
+                    I started my career at TCS working on software systems,
+                    then moved deeper into the data behind those systems.
+                    That led me to a Master of Data Science at Monash University
+                    and a focus on building cloud data pipelines, platforms,
+                    and analytics workflows.
                   </p>
 
                   <p>
-                    That eventually led me to a Master of Data Science at
-                    Monash University and deeper into data engineering.
+                    Today I work primarily with Azure, Databricks, PySpark, and
+                    SQL — building systems that turn messy information into
+                    something people can actually rely on.
                   </p>
 
-                  <p>
-                    Today, I enjoy building the machinery behind the scenes:
-                    cloud pipelines, data platforms, transformations, and
-                    analytics workflows. I&apos;m particularly comfortable with
-                    Azure, Databricks, PySpark and SQL, and I like projects
-                    where there&apos;s a real problem to solve rather than just
-                    another dataset to clean.
+                  <p className="font-display text-lg text-[#cbd5e3]">
+                    The goal is simple: build data systems that people can rely on.
+                  </p>
+                </div>
+
+                {/* Data Nerd Moment */}
+                <div className="mt-8 max-w-xl rounded-2xl border border-[#202a3a] bg-[#0d131f]/70 p-5">
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#637187]">
+                      Data Nerd Moment
+                    </span>
+
+                    <span className="font-mono text-[9px] text-[#53657d]">
+                      200 OK
+                    </span>
+                  </div>
+
+                  <p className="font-display text-lg text-[#cbd5e3]">
+                    I take data seriously.
+                    <br />
+                    <span className="text-[#718096]">
+                      Just not always myself.
+                    </span>
                   </p>
 
-                  <p className="text-[#c0cad8]">
-                    The goal is simple: build data systems that people can rely
-                    on.
+                  <p className="mt-3 font-mono text-[10px] text-[#637187]">
+                    // pipeline_status: surprisingly_stable
                   </p>
+                </div>
 
-                  {/* Data Nerd Moment */}
-                  <div className="mt-10 max-w-xl rounded-2xl border border-[#202a3a] bg-[#0d131f]/70 p-5">
-                    <div className="mb-3 flex items-center justify-between">
-                      <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-[#637187]">
-                        Data Nerd Moment
-                      </span>
-
-                      <span className="font-mono text-[9px] text-[#53657d]">
-                        200 OK
-                      </span>
-                    </div>
-
-                    <p className="font-display text-lg text-[#cbd5e3]">
-                      I take data seriously.
-                      <br />
-                      <span className="text-[#718096]">
-                        Just not always myself.
-                      </span>
+                {/* GIF */}
+                <div className="mt-4 flex max-w-xl items-center justify-between gap-6 rounded-2xl border border-[#202a3a] bg-[#0d131f]/70 p-5">
+                  <div className="min-w-0">
+                    <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#637187]">
+                      RESEARCH MODE
                     </p>
 
-                    <p className="mt-3 font-mono text-[10px] text-[#637187]">
-                      // pipeline_status: surprisingly_stable
+                    <p className="mt-5 text-sm text-[#8d9aae]">
+                      Sometimes the best solution starts with staring at the problem.
                     </p>
                   </div>
 
-                  {/* GIF */}
-                  <div className="mt-4 flex max-w-xl items-center justify-between gap-6 rounded-2xl border border-[#202a3a] bg-[#0d131f]/70 p-5">
-                    <div className="min-w-0">
-                      <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#637187]">
-                        RESEARCH MODE
-                      </p>
-
-                      <p className="mt-5 text-sm text-[#8d9aae]">
-                        Sometimes the best solution starts with staring at the problem.
-                      </p>
-                    </div>
-
-                    <img
-                      src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZzZqcjQ1eTdnb3l5bWM2cWRpbzdwZHZjczEyMDczOWw3dGpwNGg2NCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NEvPzZ8bd1V4Y/giphy.gif"
-                      alt="Thinking"
-                      loading="lazy"
-                      className="h-28 w-28 shrink-0 rounded-xl object-cover"
-                    />
-                  </div>
+                  <img
+                    src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZzZqcjQ1eTdnb3l5bWM2cWRpbzdwZHZjczEyMDczOWw3dGpwNGg2NCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NEvPzZ8bd1V4Y/giphy.gif"
+                    alt="Thinking"
+                    loading="lazy"
+                    className="h-28 w-28 shrink-0 rounded-xl object-cover"
+                  />
                 </div>
               </div>
 
               {/* About side */}
               <div className="lg:pt-2">
-                {/* Graduation photo */}
-                <div className="overflow-hidden rounded-3xl border border-[#202a3a] bg-[#0d131f] shadow-2xl shadow-black/20">
-                  <div className="relative aspect-[720/982] overflow-hidden">
-                    <img
-                      src="/images/graduation.jpeg"
-                      alt="Graduation day at Monash University"
-                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
-                    />
-                  </div>
+                {/* Data System */}
+                <div className="system-panel rounded-3xl p-6 shadow-2xl shadow-black/20 md:p-7">
+                  <div className="relative z-10">
+                    <PipelineInteractive />
 
-                  <div className="border-t border-[#202a3a] px-5 py-4">
-                    <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#536276]">
-                      2025 · Monash University
-                    </p>
+                    <div className="mt-8 grid grid-cols-2 gap-3 border-t border-[#202a3a] pt-6">
+                      <div>
+                        <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#536276]">
+                          Focus
+                        </p>
 
-                    <p className="mt-2 font-display text-sm text-[#b7c3d3]">
-                      Master of Data Science
-                    </p>
+                        <p className="mt-2 text-sm text-[#aebbd0]">
+                          Data Engineering
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#536276]">
+                          Stack
+                        </p>
+
+                        <p className="mt-2 text-sm text-[#aebbd0]">
+                          Azure · Databricks
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

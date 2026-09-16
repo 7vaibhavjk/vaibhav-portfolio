@@ -1,36 +1,196 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vaibhav Kulkarni — Portfolio
 
-## Getting Started
+Personal portfolio website for **Vaibhav Kulkarni**, a Data Engineer based in Melbourne, Australia.
 
-First, run the development server:
+The portfolio showcases my experience, projects, technical skills, certifications, and work across cloud data engineering, analytics, and modern data platforms.
+
+## 🌐 Live Website
+
+**[vaibhavjk.vercel.app](https://vaibhavjk.vercel.app)**
+
+## 👨‍💻 About
+
+I'm a Data Engineer with a background in software engineering and a Master's degree in Data Science from Monash University.
+
+My work focuses on building reliable data systems and analytics workflows using technologies such as:
+
+- Azure
+- Azure Databricks
+- PySpark
+- SQL
+- Snowflake
+- dbt
+- Azure Data Factory
+- Apache Airflow
+- Power BI
+
+## 🚀 Featured Projects
+
+### Real-Time Stock Market Data Pipeline
+
+A real-time data engineering pipeline that ingests live stock market data and processes it through a modern data stack.
+
+**Tech:** Kafka · MinIO · Snowflake · dbt · Airflow · Power BI
+
+### Modern ELT Data Pipeline
+
+A modern ELT workflow using Snowflake, dbt and Airflow to transform raw data into structured analytics models.
+
+**Tech:** Snowflake · dbt · Airflow · Python · SQL · Docker
+
+### Formula 1 Data Engineering Pipeline
+
+An Azure Databricks lakehouse pipeline for ingesting, transforming and modelling Formula 1 racing data.
+
+**Tech:** Azure Databricks · PySpark · Spark SQL · Delta Lake · Azure Data Factory · Unity Catalog · ADLS Gen2
+
+### Protegrad — AI Job Scam Detection
+
+An AI-powered platform designed to help job seekers identify potentially fraudulent job postings and scam URLs.
+
+**Tech:** React · JavaScript · Go · Python · Gemini API · SQLite · AWS EC2
+
+## 🛠️ Tech Stack
+
+### Languages
+
+Python · SQL · R · JavaScript
+
+### Data Engineering
+
+PySpark · Databricks · Snowflake · dbt · Delta Lake
+
+### Cloud
+
+Microsoft Azure · AWS · Google Cloud
+
+### Orchestration
+
+Azure Data Factory · Apache Airflow · AWS Glue
+
+### Storage
+
+Azure Data Lake Storage Gen2 · Amazon S3
+
+### DevOps & Tools
+
+Azure DevOps · Git · Docker
+
+### Visualization
+
+Power BI · Tableau
+
+## 🎓 Education
+
+**Master of Data Science**  
+Monash University · Melbourne, Australia
+
+## 📜 Certifications
+
+- Microsoft Certified: Azure Data Fundamentals
+- SAP Certified — SAP Generative AI Developer
+- SAP Certified — SAP Business Data Cloud
+- Python for Data Science, AI & Development — IBM / Coursera
+- Machine Learning — Stanford University / Coursera
+
+## 💻 Local Development
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) — version 20 or newer recommended
+- npm — included with Node.js
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/7vaibhavjk/vaibhav-portfolio.git
+```
+
+### 2. Navigate into the project
+
+```bash
+cd vaibhav-portfolio
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open the website
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+http://localhost:3000
+```
 
-## Learn More
+The development server automatically reloads when you make changes to the source files.
 
-To learn more about Next.js, take a look at the following resources:
+### 6. Create a production build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To verify the project builds successfully:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+### 7. Run the production build locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Then open:
+
+```text
+http://localhost:3000
+```
+
+## 📁 Project Structure
+
+```text
+vaibhav-portfolio/
+├── app/
+│   ├── components/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── public/
+│   └── images/
+├── package.json
+├── README.md
+├── tsconfig.json
+└── next.config.ts
+```
+
+## 🧰 Built With
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Iconify
+- Vercel
+
+## 📬 Contact
+
+**Email:** 7vaibhavjk@gmail.com
+
+**LinkedIn:** [linkedin.com/in/vaibhav-kulkarni-5698ba1a7](https://www.linkedin.com/in/vaibhav-kulkarni-5698ba1a7)
+
+**GitHub:** [github.com/7vaibhavjk](https://github.com/7vaibhavjk)
+
+---
+
+Built with Next.js and deployed with Vercel.
