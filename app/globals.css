@@ -1,26 +1,321 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #080c14;
+  --foreground: #e8edf5;
+  --muted: #8d9aae;
+  --subtle: #637187;
+  --border: #202a3a;
+  --card: #0d131f;
+  --card-hover: #111a28;
+  --accent: #8da7c4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Inter Variable", Inter, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter Variable", Inter, sans-serif;
+}
+
+::selection {
+  background: rgba(141, 167, 196, 0.22);
+  color: #ffffff;
+}
+
+/* Typography */
+
+.font-display {
+  font-family: "Space Grotesk Variable", "Space Grotesk", sans-serif;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* Background grid */
+
+.portfolio-grid {
+  background-image:
+    linear-gradient(rgba(130, 155, 185, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 155, 185, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Hero system panel */
+
+.system-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(141, 167, 196, 0.18);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 25, 39, 0.96),
+      rgba(9, 14, 23, 0.98)
+    );
+}
+
+.system-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(141, 167, 196, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(141, 167, 196, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Pipeline */
+
+.pipeline {
+  position: relative;
+}
+
+.pipeline-line {
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  bottom: 18px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(141, 167, 196, 0.12),
+    rgba(141, 167, 196, 0.5),
+    rgba(141, 167, 196, 0.12)
+  );
+}
+
+.pipeline-signal {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #a9bed5;
+  box-shadow: 0 0 0 4px rgba(141, 167, 196, 0.08);
+  pointer-events: none;
+}
+
+/* Small horizontal signal */
+
+.data-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-line::after {
+  content: "";
+  position: absolute;
+  left: -30%;
+  bottom: 0;
+  width: 28%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(169, 190, 213, 0.55),
+    transparent
+  );
+  animation: dataLine 6s linear infinite;
+}
+
+@keyframes dataLine {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(470%);
+  }
+}
+
+/* Focus card */
+
+.float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* =========================================
+   SITE ATMOSPHERE
+   ========================================= */
+
+.site-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse 75% 55% at 50% -15%,
+      rgba(88, 112, 142, 0.13),
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 55% 60% at 100% 45%,
+      rgba(68, 91, 120, 0.07),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      #0a0f18 0%,
+      #080c14 45%,
+      #070b12 100%
+    );
+}
+
+/* Moving technical grid */
+
+.site-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: -120px;
+
+  background-image:
+    linear-gradient(
+      rgba(137, 162, 190, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(137, 162, 190, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 72px 72px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0, 0, 0, 0.8) 45%,
+    transparent 100%
+  );
+
+  animation: atmosphereGrid 24s linear infinite;
+}
+
+/* Horizontal scanning beam */
+
+.site-atmosphere::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: -25%;
+
+  height: 30%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(156, 181, 208, 0.025) 45%,
+    rgba(156, 181, 208, 0.05) 50%,
+    rgba(156, 181, 208, 0.025) 55%,
+    transparent 100%
+  );
+
+  animation: atmosphereScan 9s ease-in-out infinite;
+}
+
+@keyframes atmosphereGrid {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(72px, 72px, 0);
+  }
+}
+
+@keyframes atmosphereScan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(430%);
+    opacity: 0;
+  }
+}
+
+/* =========================================
+   SECTION DEPTH
+   ========================================= */
+
+.section-surface {
+  position: relative;
+  z-index: 1;
+}
+
+.section-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.012),
+      transparent 18%,
+      transparent 82%,
+      rgba(255, 255, 255, 0.008)
+    );
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
