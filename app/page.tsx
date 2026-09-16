@@ -84,14 +84,23 @@ export default function Home() {
                   </span>
                 </div>
 
-                <p className="mt-8 font-mono text-xs uppercase tracking-[0.28em] text-[#8da7c4]">
-                  Data Engineer · Analytics
-                </p>
+                <div className="mt-8">
+                  <h2 className="font-display text-5xl font-medium leading-none tracking-[-0.045em] text-[#e8edf5] sm:text-6xl">
+                    Hello, I&apos;m
+                    <br />
+                    <span className="text-[#8da7c4]">Vaibhav Kulkarni.</span>
+                    <span className="ml-2 inline-block">👋</span>
+                  </h2>
 
-                <h1 className="font-display mt-6 max-w-4xl text-[3.7rem] font-medium leading-[0.94] tracking-[-0.055em] text-[#edf2f8] sm:text-6xl md:text-7xl lg:text-[5.7rem]">
+                  <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-[#637187]">
+                    DATA ENGINEER · ANALYTICS
+                  </p>
+                </div>
+
+                <h1 className="mt-7 font-display text-6xl font-medium leading-[0.92] tracking-[-0.045em] text-[#e8edf5] md:text-7xl lg:text-[5.5rem]">
                   I turn data into
                   <br />
-                  <span className="text-[#708197]">
+                  <span className="text-[#718096]">
                     systems that move.
                   </span>
                 </h1>
